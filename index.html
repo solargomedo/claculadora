@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+       <div class="row">
+        <h1>ejemplos</h1>
+        <div class="col-4">
+            
+            <ul class="list-group">
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+                <li class="list-group-item">A fourth item</li>
+                <li class="list-group-item">And a fifth one</li>
+              </ul>
+
+        </div>   
+               
+
+        <div class="col-4 ">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password_id" onchange="mostrarpassword()">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-chesck-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+     
+    </div>
+
+
+   
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script>
+
+ 
+const btn = document.querySelector(".btn"); // campuramos el boton
+btn.addEventListener("click", function(){           //aca le damos el evento al boton, es un callback, el navegador ejecuta  
+
+    alert("me apretaste")
+})
+
+// lo mismo pero usando on
+
+const pass = document.querySelector("#password_id");
+function mostrarpassword(){
+    console.log(pass.value);
+}
+
+
+//como manejar eventos sobre varios objetos
+
+const piri = document.querySelector("#casa li")
+
+// for (let i=0; i<casa.length; i++)
+for(let cas of casa){
+    console.log(casa)
+}
+
+
+
+
+
+</script>
+</body>
+</html>
